@@ -121,6 +121,12 @@
     <Compile Include="Sistem Admin\FormBarang.Designer.cs">
       <DependentUpon>FormBarang.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sistem Admin\FormInpBrg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistem Admin\FormInpBrg.Designer.cs">
+      <DependentUpon>FormInpBrg.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sistem Admin\FormUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +151,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sistem Admin\FormBarang.resx">
       <DependentUpon>FormBarang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistem Admin\FormInpBrg.resx">
+      <DependentUpon>FormInpBrg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sistem Admin\FormUser.resx">
       <DependentUpon>FormUser.cs</DependentUpon>

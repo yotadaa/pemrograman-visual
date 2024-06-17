@@ -31,11 +31,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.button7 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,28 +48,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Daftar Barang";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button1.Location = new System.Drawing.Point(41, 81);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(151, 47);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "TAMBAH BARANG";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button2.Location = new System.Drawing.Point(208, 81);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(151, 47);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "EDIT KATEGORI";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // dataGridView1
             // 
@@ -122,15 +99,27 @@
             this.Column9.ToolTipText = "Edit";
             this.Column9.Width = 50;
             // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button7.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button7.Location = new System.Drawing.Point(41, 90);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(119, 43);
+            this.button7.TabIndex = 16;
+            this.button7.Text = "Tambah Barang";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // FormBarang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(1097, 553);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
@@ -147,11 +136,10 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewButtonColumn Column1;
         private System.Windows.Forms.DataGridViewButtonColumn Column9;
+        private System.Windows.Forms.Button button7;
     }
 }
 
