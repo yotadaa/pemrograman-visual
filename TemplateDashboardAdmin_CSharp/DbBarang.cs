@@ -25,6 +25,27 @@ namespace TemplateDashboardAdmin_CSharp
             return conn;
         }
 
+        public static string GetCurrentUnixTime11Length()
+        {
+            // Get the current Unix time in seconds since the epoch
+            long unixTime = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
+
+            // Convert it to a string
+            string unixTimeString = unixTime.ToString();
+
+            // Ensure the length is exactly 11 characters
+            if (unixTimeString.Length > 11)
+            {
+                unixTimeString = unixTimeString.Substring(0, 11); // Trim if longer than 11 characters
+            }
+            else if (unixTimeString.Length < 11)
+            {
+                unixTimeString = unixTimeString.PadLeft(11, '0'); // Pad with leading zeros if shorter than 11 characters
+            }
+
+            return unixTimeString;
+        }
+
         public static void DisplayAndSearch(string query, DataGridView  dgv)
         {
             string sql = query;
@@ -43,7 +64,6 @@ namespace TemplateDashboardAdmin_CSharp
 
             try
             {
-                con.Open();
 
                 // Step 1: Retrieve the last Kode from the ITEMS table
                 string getLastKodeSql = "SELECT Kode FROM items ORDER BY id DESC LIMIT 1";
@@ -56,7 +76,7 @@ namespace TemplateDashboardAdmin_CSharp
                 std.Kode = newKode.ToString();
 
                 // Step 2: Insert the new record with the generated Kode
-                string sql = "INSERT INTO items (Nama, Kategori, Deskripsi, Stok, HargaInbound, HargaOutbound, Kode, Email) VALUES (@BarangNama, @BarangKategori, @BarangDeskripsi, @BarangStok, @BarangHargaInbound, @BarangHargaOutbound, @BarangKode, @BarangEmail)";
+                string sql = "INSERT INTO items (nama, kategori, desk, stok, harga_awal, harga_jual, kode, email) VALUES (@BarangNama, @BarangKategori, @BarangDeskripsi,   @BarangStok, @BarangHargaInbound, @BarangHargaOutbound, @BarangKode, 'email@gmail.com')";
                 MySqlCommand cmd = new MySqlCommand(sql, con);
                 cmd.CommandType = CommandType.Text;
 
@@ -66,8 +86,9 @@ namespace TemplateDashboardAdmin_CSharp
                 cmd.Parameters.Add("@BarangStok", MySqlDbType.Int32).Value = std.Stok;
                 cmd.Parameters.Add("@BarangHargaInbound", MySqlDbType.Decimal).Value = std.HargaInbound;
                 cmd.Parameters.Add("@BarangHargaOutbound", MySqlDbType.Decimal).Value = std.HargaOutbound;
-                cmd.Parameters.Add("@BarangKode", MySqlDbType.VarChar).Value = std.Kode;
-                cmd.Parameters.Add("@BarangEmail", MySqlDbType.VarChar).Value = std.Email;
+                cmd.Parameters.Add("@BarangKode", MySqlDbType.Int32).Value = GetCurrentUnixTime11Length();
+                cmd.Parameters.Add("@BarangEmail", MySqlDbType.VarChar).Value = "email@gmail.com";
+                MessageBox.Show("Nama: "+std.Nama+"Kategori: "+std.Kategori+"DESKRIPSI : "+std.Deskripsi+"STOK : "+std.Stok+"INBOUND: "+std.HargaInbound+"OUTBOUND: "+std.HargaOutbound+"KODE : "+newKode.ToString()+"email"+std.Email);
 
                 cmd.ExecuteNonQuery();
             }
@@ -75,10 +96,10 @@ namespace TemplateDashboardAdmin_CSharp
             {
                 // Handle the exception appropriately
                 Console.WriteLine(ex.Message);
+                MessageBox.Show(ex.Message);
             }
             finally
             {
-                con.Close();
             }
         }
         public static void UpdateBarang(Barang std)

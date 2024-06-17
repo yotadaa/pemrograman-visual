@@ -167,6 +167,11 @@ namespace TemplateDashboardAdmin_CSharp
 
         private void transaksiToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            ShowFormToPanel(new FormUser());
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
 
         }
     }

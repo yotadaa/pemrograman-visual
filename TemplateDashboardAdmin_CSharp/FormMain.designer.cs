@@ -277,6 +277,7 @@ namespace TemplateDashboardAdmin_CSharp
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(206, 24);
             this.toolStripMenuItem1.Text = "Dashboard";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // masterDataToolStripMenuItem
             // 

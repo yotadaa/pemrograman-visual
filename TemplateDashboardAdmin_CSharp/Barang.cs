@@ -19,7 +19,7 @@ namespace TemplateDashboardAdmin_CSharp
         public string Email { get; set; }
         public string Kode { get; set; }
 
-        public Barang(string name, string foto, string deskripsi, int kategori, int stok, float hargaInbound, float hargaOutbound, string email, string kode)
+        public Barang(string name, string foto, string deskripsi, int kategori, int stok, float hargaInbound, float hargaOutbound)
         {
             Foto = foto;
             Nama = name;
@@ -28,8 +28,6 @@ namespace TemplateDashboardAdmin_CSharp
             Stok = stok;
             HargaInbound = hargaInbound;
             HargaOutbound = hargaOutbound;
-            Email = email;
-            Kode = kode;
 
         }
     }

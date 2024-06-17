@@ -58,5 +58,10 @@ namespace TemplateDashboardAdmin_CSharp.Sistem_Admin
             Form form = new FormInpBrg();
             form.Show();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Display();
+        }
     }
 }
