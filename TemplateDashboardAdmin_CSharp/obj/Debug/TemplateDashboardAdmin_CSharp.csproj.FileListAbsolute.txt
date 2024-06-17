@@ -116,3 +116,5 @@ D:\pemvis\project\TemplateDashboardAdmin_CSharp\obj\Debug\Template.81FE71D0.Up2D
 D:\pemvis\project\TemplateDashboardAdmin_CSharp\obj\Debug\TemplateDashboardAdmin_CSharp.exe
 D:\pemvis\project\TemplateDashboardAdmin_CSharp\obj\Debug\TemplateDashboardAdmin_CSharp.pdb
 D:\pemvis\project\TemplateDashboardAdmin_CSharp\obj\Debug\TemplateDashboardAdmin_CSharp.Sistem_Admin.FormInpBrg.resources
+D:\pemvis\project\TemplateDashboardAdmin_CSharp\obj\Debug\TemplateDashboardAdmin_CSharp.deskbrg.resources
+D:\pemvis\project\TemplateDashboardAdmin_CSharp\obj\Debug\TemplateDashboardAdmin_CSharp.inpbrgnew.resources

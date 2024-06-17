@@ -132,7 +132,7 @@ namespace TemplateDashboardAdmin_CSharp
                 con.Close();
             }
         }
-        public static void DeleteBarang(string kode)
+        public static void DeleteBarang(int kode)
         {
             string sql = "DELETE FROM items WHERE Kode = @BarangKode";
             MySqlConnection con = GetConnection();

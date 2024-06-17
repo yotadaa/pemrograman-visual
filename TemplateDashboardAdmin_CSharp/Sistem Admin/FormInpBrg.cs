@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Google.Protobuf.WellKnownTypes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,9 +14,11 @@ namespace TemplateDashboardAdmin_CSharp.Sistem_Admin
     public partial class FormInpBrg : Form
     {
         int kategori = 0;
-        public FormInpBrg()
+        DataGridView dgv;
+        public FormInpBrg(DataGridView dgv)
         {
             InitializeComponent();
+            this.dgv = dgv;
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -62,6 +65,7 @@ namespace TemplateDashboardAdmin_CSharp.Sistem_Admin
             } 
             Barang std = new Barang(textBox1.Text.Trim(),"",  textBox5.Text.Trim(), kategori, int.Parse (textBox2.Text.Trim()), int.Parse(textBox3.Text.Trim()), int.Parse(textBox4.Text.Trim()));
             DbBarang.AddBarang(std);
+            DbBarang.DisplayAndSearch("select  kode, nama, desk, kategori,stok,harga_awal, harga_jual FROM items", dgv);
         }
 
         private void label7_Click(object sender, EventArgs e)
