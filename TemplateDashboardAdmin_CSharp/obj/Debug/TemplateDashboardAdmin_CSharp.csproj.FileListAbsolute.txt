@@ -109,7 +109,6 @@ D:\pemvis\project\TemplateDashboardAdmin_CSharp\obj\Debug\TemplateDashboardAdmin
 D:\pemvis\project\TemplateDashboardAdmin_CSharp\obj\Debug\TemplateDashboardAdmin_CSharp.Properties.Resources.resources
 D:\pemvis\project\TemplateDashboardAdmin_CSharp\obj\Debug\TemplateDashboardAdmin_CSharp.Sistem_Admin.FormGroup.resources
 D:\pemvis\project\TemplateDashboardAdmin_CSharp\obj\Debug\TemplateDashboardAdmin_CSharp.Sistem_Admin.FormBarang.resources
-D:\pemvis\project\TemplateDashboardAdmin_CSharp\obj\Debug\TemplateDashboardAdmin_CSharp.Sistem_Admin.FormUser.resources
 D:\pemvis\project\TemplateDashboardAdmin_CSharp\obj\Debug\TemplateDashboardAdmin_CSharp.csproj.GenerateResource.cache
 D:\pemvis\project\TemplateDashboardAdmin_CSharp\obj\Debug\TemplateDashboardAdmin_CSharp.csproj.CoreCompileInputs.cache
 D:\pemvis\project\TemplateDashboardAdmin_CSharp\obj\Debug\Template.81FE71D0.Up2Date
@@ -118,3 +117,6 @@ D:\pemvis\project\TemplateDashboardAdmin_CSharp\obj\Debug\TemplateDashboardAdmin
 D:\pemvis\project\TemplateDashboardAdmin_CSharp\obj\Debug\TemplateDashboardAdmin_CSharp.Sistem_Admin.FormInpBrg.resources
 D:\pemvis\project\TemplateDashboardAdmin_CSharp\obj\Debug\TemplateDashboardAdmin_CSharp.deskbrg.resources
 D:\pemvis\project\TemplateDashboardAdmin_CSharp\obj\Debug\TemplateDashboardAdmin_CSharp.inpbrgnew.resources
+D:\pemvis\project\TemplateDashboardAdmin_CSharp\obj\Debug\TemplateDashboardAdmin_CSharp.Sistem_Admin.FormKeluar.resources
+D:\pemvis\project\TemplateDashboardAdmin_CSharp\obj\Debug\TemplateDashboardAdmin_CSharp.Sistem_Admin.FormMasuk.resources
+D:\pemvis\project\TemplateDashboardAdmin_CSharp\obj\Debug\TemplateDashboardAdmin_CSharp.Sistem_Admin.Dashboard.resources

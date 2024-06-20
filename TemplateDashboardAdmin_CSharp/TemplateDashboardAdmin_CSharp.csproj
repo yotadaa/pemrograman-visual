@@ -133,11 +133,23 @@
     <Compile Include="Sistem Admin\FormInpBrg.Designer.cs">
       <DependentUpon>FormInpBrg.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sistem Admin\FormUser.cs">
+    <Compile Include="Sistem Admin\FormMasuk.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sistem Admin\FormUser.Designer.cs">
-      <DependentUpon>FormUser.cs</DependentUpon>
+    <Compile Include="Sistem Admin\FormMasuk.Designer.cs">
+      <DependentUpon>FormMasuk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistem Admin\FormKeluar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistem Admin\FormKeluar.Designer.cs">
+      <DependentUpon>FormKeluar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistem Admin\Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistem Admin\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Sistem Admin\inpbrgnew.cs">
       <SubType>Form</SubType>
@@ -170,8 +182,14 @@
     <EmbeddedResource Include="Sistem Admin\FormInpBrg.resx">
       <DependentUpon>FormInpBrg.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sistem Admin\FormUser.resx">
-      <DependentUpon>FormUser.cs</DependentUpon>
+    <EmbeddedResource Include="Sistem Admin\FormMasuk.resx">
+      <DependentUpon>FormMasuk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistem Admin\FormKeluar.resx">
+      <DependentUpon>FormKeluar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistem Admin\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sistem Admin\inpbrgnew.resx">
       <DependentUpon>inpbrgnew.cs</DependentUpon>

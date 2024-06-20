@@ -12,9 +12,11 @@ namespace TemplateDashboardAdmin_CSharp
 {
     public partial class inpbrgnew : Form
     {
-        public inpbrgnew()
+        bool positif;
+        public inpbrgnew(bool positif)
         {
             InitializeComponent();
+            this.positif = positif;
         }
 
         private void label1_Click(object sender, EventArgs e)

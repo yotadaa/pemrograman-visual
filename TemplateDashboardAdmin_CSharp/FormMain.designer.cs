@@ -43,7 +43,6 @@ namespace TemplateDashboardAdmin_CSharp
             this.PanelTool = new System.Windows.Forms.Panel();
             this.btnNotif = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.LabelTitle = new System.Windows.Forms.Label();
             this.btnMenu = new System.Windows.Forms.PictureBox();
             this.PanelSideBar = new System.Windows.Forms.Panel();
             this.PanelMenu = new System.Windows.Forms.Panel();
@@ -53,15 +52,6 @@ namespace TemplateDashboardAdmin_CSharp
             this.masterDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transaksiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.laporanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.PanelProfile = new System.Windows.Forms.Panel();
-            this.ButtonConnect = new System.Windows.Forms.Button();
-            this.ButtonHelp = new System.Windows.Forms.Button();
-            this.ButtonRefresh = new System.Windows.Forms.Button();
-            this.ButtonSetting = new System.Windows.Forms.Button();
-            this.LabelNama = new System.Windows.Forms.Label();
-            this.LabelMenu = new System.Windows.Forms.Label();
-            this.PictureBoxProfile = new System.Windows.Forms.PictureBox();
-            this.LabelUserId = new System.Windows.Forms.Label();
             this.PanelTitle = new System.Windows.Forms.Panel();
             this.LabelRefresh = new System.Windows.Forms.Label();
             this.TimerMain = new System.Windows.Forms.Timer(this.components);
@@ -72,8 +62,6 @@ namespace TemplateDashboardAdmin_CSharp
             this.PanelSideBar.SuspendLayout();
             this.PanelMenu.SuspendLayout();
             this.MenuApp.SuspendLayout();
-            this.PanelProfile.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxProfile)).BeginInit();
             this.PanelTitle.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -110,6 +98,7 @@ namespace TemplateDashboardAdmin_CSharp
             this.PanelFormFill.Name = "PanelFormFill";
             this.PanelFormFill.Size = new System.Drawing.Size(1027, 548);
             this.PanelFormFill.TabIndex = 4;
+            this.PanelFormFill.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelFormFill_Paint);
             // 
             // PanelSparator
             // 
@@ -134,7 +123,6 @@ namespace TemplateDashboardAdmin_CSharp
             this.PanelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(56)))), ((int)(((byte)(84)))));
             this.PanelHeader.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PanelHeader.Controls.Add(this.PanelTool);
-            this.PanelHeader.Controls.Add(this.LabelTitle);
             this.PanelHeader.Controls.Add(this.btnMenu);
             this.PanelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelHeader.Location = new System.Drawing.Point(219, 0);
@@ -191,17 +179,6 @@ namespace TemplateDashboardAdmin_CSharp
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // LabelTitle
-            // 
-            this.LabelTitle.AutoSize = true;
-            this.LabelTitle.Font = new System.Drawing.Font("Leelawadee UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelTitle.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LabelTitle.Location = new System.Drawing.Point(43, 10);
-            this.LabelTitle.Name = "LabelTitle";
-            this.LabelTitle.Size = new System.Drawing.Size(178, 23);
-            this.LabelTitle.TabIndex = 3;
-            this.LabelTitle.Text = "MYAPP CORE SYSTEM";
-            // 
             // btnMenu
             // 
             this.btnMenu.BackColor = System.Drawing.Color.Transparent;
@@ -221,7 +198,6 @@ namespace TemplateDashboardAdmin_CSharp
             // 
             this.PanelSideBar.BackColor = System.Drawing.Color.MediumTurquoise;
             this.PanelSideBar.Controls.Add(this.PanelMenu);
-            this.PanelSideBar.Controls.Add(this.PanelProfile);
             this.PanelSideBar.Controls.Add(this.PanelTitle);
             this.PanelSideBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelSideBar.Location = new System.Drawing.Point(0, 0);
@@ -238,17 +214,17 @@ namespace TemplateDashboardAdmin_CSharp
             this.PanelMenu.Controls.Add(this.MenuApp);
             this.PanelMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelMenu.Location = new System.Drawing.Point(0, 207);
+            this.PanelMenu.Location = new System.Drawing.Point(0, 42);
             this.PanelMenu.Margin = new System.Windows.Forms.Padding(9, 3, 9, 3);
             this.PanelMenu.Name = "PanelMenu";
             this.PanelMenu.Padding = new System.Windows.Forms.Padding(3, 0, 3, 0);
-            this.PanelMenu.Size = new System.Drawing.Size(219, 494);
+            this.PanelMenu.Size = new System.Drawing.Size(219, 659);
             this.PanelMenu.TabIndex = 5;
             // 
             // PanelInfo
             // 
             this.PanelInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PanelInfo.Location = new System.Drawing.Point(3, 454);
+            this.PanelInfo.Location = new System.Drawing.Point(3, 619);
             this.PanelInfo.Name = "PanelInfo";
             this.PanelInfo.Size = new System.Drawing.Size(213, 40);
             this.PanelInfo.TabIndex = 1;
@@ -267,7 +243,7 @@ namespace TemplateDashboardAdmin_CSharp
             this.MenuApp.Location = new System.Drawing.Point(3, 0);
             this.MenuApp.Name = "MenuApp";
             this.MenuApp.Padding = new System.Windows.Forms.Padding(3, 9, 3, 0);
-            this.MenuApp.Size = new System.Drawing.Size(213, 126);
+            this.MenuApp.Size = new System.Drawing.Size(213, 107);
             this.MenuApp.TabIndex = 0;
             this.MenuApp.Text = "MenuStrip";
             // 
@@ -303,118 +279,6 @@ namespace TemplateDashboardAdmin_CSharp
             this.laporanToolStripMenuItem.Text = "Barang Keluar";
             this.laporanToolStripMenuItem.Click += new System.EventHandler(this.laporanToolStripMenuItem_Click);
             // 
-            // PanelProfile
-            // 
-            this.PanelProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(61)))));
-            this.PanelProfile.Controls.Add(this.ButtonConnect);
-            this.PanelProfile.Controls.Add(this.ButtonHelp);
-            this.PanelProfile.Controls.Add(this.ButtonRefresh);
-            this.PanelProfile.Controls.Add(this.ButtonSetting);
-            this.PanelProfile.Controls.Add(this.LabelNama);
-            this.PanelProfile.Controls.Add(this.LabelMenu);
-            this.PanelProfile.Controls.Add(this.PictureBoxProfile);
-            this.PanelProfile.Controls.Add(this.LabelUserId);
-            this.PanelProfile.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelProfile.Location = new System.Drawing.Point(0, 42);
-            this.PanelProfile.Name = "PanelProfile";
-            this.PanelProfile.Size = new System.Drawing.Size(219, 165);
-            this.PanelProfile.TabIndex = 5;
-            // 
-            // ButtonConnect
-            // 
-            this.ButtonConnect.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.ButtonConnect.FlatAppearance.BorderSize = 0;
-            this.ButtonConnect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonConnect.Image = global::TemplateDashboardAdmin_CSharp.Properties.Resources.connect;
-            this.ButtonConnect.Location = new System.Drawing.Point(68, 131);
-            this.ButtonConnect.Name = "ButtonConnect";
-            this.ButtonConnect.Size = new System.Drawing.Size(38, 31);
-            this.ButtonConnect.TabIndex = 8;
-            this.ButtonConnect.UseVisualStyleBackColor = true;
-            // 
-            // ButtonHelp
-            // 
-            this.ButtonHelp.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.ButtonHelp.FlatAppearance.BorderSize = 0;
-            this.ButtonHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonHelp.Image = global::TemplateDashboardAdmin_CSharp.Properties.Resources.help;
-            this.ButtonHelp.Location = new System.Drawing.Point(11, 130);
-            this.ButtonHelp.Name = "ButtonHelp";
-            this.ButtonHelp.Size = new System.Drawing.Size(38, 31);
-            this.ButtonHelp.TabIndex = 8;
-            this.ButtonHelp.UseVisualStyleBackColor = true;
-            this.ButtonHelp.Click += new System.EventHandler(this.ButtonHelp_Click);
-            // 
-            // ButtonRefresh
-            // 
-            this.ButtonRefresh.FlatAppearance.BorderSize = 0;
-            this.ButtonRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonRefresh.Image = global::TemplateDashboardAdmin_CSharp.Properties.Resources.refresh1;
-            this.ButtonRefresh.Location = new System.Drawing.Point(124, 128);
-            this.ButtonRefresh.Name = "ButtonRefresh";
-            this.ButtonRefresh.Size = new System.Drawing.Size(39, 33);
-            this.ButtonRefresh.TabIndex = 1;
-            this.ButtonRefresh.UseVisualStyleBackColor = true;
-            // 
-            // ButtonSetting
-            // 
-            this.ButtonSetting.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ButtonSetting.FlatAppearance.BorderSize = 0;
-            this.ButtonSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonSetting.Image = global::TemplateDashboardAdmin_CSharp.Properties.Resources.setting;
-            this.ButtonSetting.Location = new System.Drawing.Point(188, 134);
-            this.ButtonSetting.Name = "ButtonSetting";
-            this.ButtonSetting.Padding = new System.Windows.Forms.Padding(3);
-            this.ButtonSetting.Size = new System.Drawing.Size(25, 23);
-            this.ButtonSetting.TabIndex = 2;
-            this.ButtonSetting.UseVisualStyleBackColor = true;
-            // 
-            // LabelNama
-            // 
-            this.LabelNama.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.LabelNama.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelNama.ForeColor = System.Drawing.Color.White;
-            this.LabelNama.Location = new System.Drawing.Point(3, 68);
-            this.LabelNama.Name = "LabelNama";
-            this.LabelNama.Size = new System.Drawing.Size(213, 16);
-            this.LabelNama.TabIndex = 4;
-            this.LabelNama.Text = "Zainudin";
-            this.LabelNama.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // LabelMenu
-            // 
-            this.LabelMenu.AutoSize = true;
-            this.LabelMenu.Font = new System.Drawing.Font("Microsoft YaHei UI", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelMenu.ForeColor = System.Drawing.Color.White;
-            this.LabelMenu.Location = new System.Drawing.Point(56, 103);
-            this.LabelMenu.Name = "LabelMenu";
-            this.LabelMenu.Size = new System.Drawing.Size(99, 24);
-            this.LabelMenu.TabIndex = 1;
-            this.LabelMenu.Text = "Menu App";
-            // 
-            // PictureBoxProfile
-            // 
-            this.PictureBoxProfile.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.PictureBoxProfile.Image = global::TemplateDashboardAdmin_CSharp.Properties.Resources.user;
-            this.PictureBoxProfile.Location = new System.Drawing.Point(74, 6);
-            this.PictureBoxProfile.Name = "PictureBoxProfile";
-            this.PictureBoxProfile.Size = new System.Drawing.Size(60, 59);
-            this.PictureBoxProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PictureBoxProfile.TabIndex = 2;
-            this.PictureBoxProfile.TabStop = false;
-            // 
-            // LabelUserId
-            // 
-            this.LabelUserId.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.LabelUserId.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelUserId.ForeColor = System.Drawing.Color.White;
-            this.LabelUserId.Location = new System.Drawing.Point(3, 87);
-            this.LabelUserId.Name = "LabelUserId";
-            this.LabelUserId.Size = new System.Drawing.Size(213, 16);
-            this.LabelUserId.TabIndex = 3;
-            this.LabelUserId.Text = "Admin";
-            this.LabelUserId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // PanelTitle
             // 
             this.PanelTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(61)))));
@@ -435,9 +299,9 @@ namespace TemplateDashboardAdmin_CSharp
             this.LabelRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LabelRefresh.Location = new System.Drawing.Point(48, 7);
             this.LabelRefresh.Name = "LabelRefresh";
-            this.LabelRefresh.Size = new System.Drawing.Size(129, 25);
+            this.LabelRefresh.Size = new System.Drawing.Size(108, 25);
             this.LabelRefresh.TabIndex = 0;
-            this.LabelRefresh.Text = "App System";
+            this.LabelRefresh.Text = "SIMPELO";
             this.LabelRefresh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // TimerMain
@@ -461,7 +325,6 @@ namespace TemplateDashboardAdmin_CSharp
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.PanelMain.ResumeLayout(false);
             this.PanelHeader.ResumeLayout(false);
-            this.PanelHeader.PerformLayout();
             this.PanelTool.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).EndInit();
             this.PanelSideBar.ResumeLayout(false);
@@ -469,9 +332,6 @@ namespace TemplateDashboardAdmin_CSharp
             this.PanelMenu.PerformLayout();
             this.MenuApp.ResumeLayout(false);
             this.MenuApp.PerformLayout();
-            this.PanelProfile.ResumeLayout(false);
-            this.PanelProfile.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxProfile)).EndInit();
             this.PanelTitle.ResumeLayout(false);
             this.PanelTitle.PerformLayout();
             this.ResumeLayout(false);
@@ -488,24 +348,14 @@ namespace TemplateDashboardAdmin_CSharp
         internal System.Windows.Forms.Panel PanelTool;
         internal System.Windows.Forms.Button btnNotif;
         internal System.Windows.Forms.Button btnLogout;
-        internal System.Windows.Forms.Label LabelTitle;
         internal System.Windows.Forms.PictureBox btnMenu;
         internal System.Windows.Forms.Panel PanelSideBar;
         internal System.Windows.Forms.Panel PanelMenu;
         internal System.Windows.Forms.Panel PanelInfo;
         internal System.Windows.Forms.MenuStrip MenuApp;
-        internal System.Windows.Forms.Panel PanelProfile;
-        internal System.Windows.Forms.Label LabelNama;
-        internal System.Windows.Forms.Label LabelMenu;
-        internal System.Windows.Forms.PictureBox PictureBoxProfile;
-        internal System.Windows.Forms.Label LabelUserId;
         internal System.Windows.Forms.Panel PanelTitle;
-        internal System.Windows.Forms.Button ButtonSetting;
-        internal System.Windows.Forms.Button ButtonRefresh;
         internal System.Windows.Forms.Label LabelRefresh;
         internal System.Windows.Forms.Timer TimerMain;
-        internal System.Windows.Forms.Button ButtonHelp;
-        internal System.Windows.Forms.Button ButtonConnect;
         private System.Windows.Forms.ToolStripMenuItem masterDataToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem transaksiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem laporanToolStripMenuItem;

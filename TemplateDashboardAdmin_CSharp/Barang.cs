@@ -30,6 +30,11 @@ namespace TemplateDashboardAdmin_CSharp
             HargaOutbound = hargaOutbound;
 
         }
+
+        public Barang()
+        {
+
+        }
     }
 
     

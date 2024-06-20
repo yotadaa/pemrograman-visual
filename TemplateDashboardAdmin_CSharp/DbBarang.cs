@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -88,7 +89,6 @@ namespace TemplateDashboardAdmin_CSharp
                 cmd.Parameters.Add("@BarangHargaOutbound", MySqlDbType.Decimal).Value = std.HargaOutbound;
                 cmd.Parameters.Add("@BarangKode", MySqlDbType.Int32).Value = GetCurrentUnixTime11Length();
                 cmd.Parameters.Add("@BarangEmail", MySqlDbType.VarChar).Value = "email@gmail.com";
-                MessageBox.Show("Nama: "+std.Nama+"Kategori: "+std.Kategori+"DESKRIPSI : "+std.Deskripsi+"STOK : "+std.Stok+"INBOUND: "+std.HargaInbound+"OUTBOUND: "+std.HargaOutbound+"KODE : "+newKode.ToString()+"email"+std.Email);
 
                 cmd.ExecuteNonQuery();
             }
@@ -96,15 +96,47 @@ namespace TemplateDashboardAdmin_CSharp
             {
                 // Handle the exception appropriately
                 Console.WriteLine(ex.Message);
-                MessageBox.Show(ex.Message);
+                /*MessageBox.Show(ex.Message);*/
             }
             finally
             {
             }
         }
-        public static void UpdateBarang(Barang std)
+
+        public static void AddTransaksi(Barang std,int qty, float total, DateTime tanggal)
         {
-            string sql = "UPDATE items SET Nama = @BarangNama, Kategori = @BarangKategori, Deskripsi = @BarangDeskripsi, Stok = @BarangStok, HargaInbound = @BarangHargaInbound, HargaOutbound = @BarangHargaOutbound, Email = @BarangEmail WHERE Kode = @BarangKode";
+            MySqlConnection con = GetConnection();
+
+            try
+            {
+
+                // Step 2: Insert the new record with the generated Kode
+                string sql = "INSERT INTO transactions (qty, id_brg, total, email, host, created_at) VALUES ( @BarangQty, @BarangIdBrg, @BarangTotal,'tes@gmail.com', 'tes@gmail.com', @BarangTanggal)";
+                MySqlCommand cmd = new MySqlCommand(sql, con);
+                cmd.CommandType = CommandType.Text;
+
+
+                cmd.Parameters.Add("@BarangQty", MySqlDbType.Int32).Value = qty;
+                cmd.Parameters.Add("@BarangIdBrg", MySqlDbType.VarChar).Value = std.Kode;
+                cmd.Parameters.Add("@BarangTotal", MySqlDbType.VarChar).Value = total;
+                cmd.Parameters.Add("@BarangEmail", MySqlDbType.VarChar).Value = "email@gmail.com";
+                cmd.Parameters.Add("@BarangHost", MySqlDbType.VarChar).Value = "email@gmail.com";
+                cmd.Parameters.Add("@BarangTanggal", MySqlDbType.Timestamp).Value = tanggal;
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                // Handle the exception appropriately
+                Console.WriteLine(ex.Message);
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+            }
+        }
+        public static void UpdateBarang(Barang std, int total = 0)
+        {
+            string sql = "UPDATE items SET nama = @BarangNama, kategori = @BarangKategori, desk = @BarangDeskripsi, Stok = @BarangStok, harga_awal = @BarangHargaInbound, harga_jual = @BarangHargaOutbound, email = @BarangEmail WHERE Kode = @BarangKode";
             MySqlConnection con = GetConnection();
             MySqlCommand cmd = new MySqlCommand(sql, con);
             cmd.CommandType = CommandType.Text;
@@ -112,7 +144,7 @@ namespace TemplateDashboardAdmin_CSharp
             cmd.Parameters.Add("@BarangNama", MySqlDbType.VarChar).Value = std.Nama;
             cmd.Parameters.Add("@BarangKategori", MySqlDbType.VarChar).Value = std.Kategori;
             cmd.Parameters.Add("@BarangDeskripsi", MySqlDbType.VarChar).Value = std.Deskripsi;
-            cmd.Parameters.Add("@BarangStok", MySqlDbType.Int32).Value = std.Stok;
+            cmd.Parameters.Add("@BarangStok", MySqlDbType.Int32).Value = std.Stok+total;
             cmd.Parameters.Add("@BarangHargaInbound", MySqlDbType.Decimal).Value = std.HargaInbound;
             cmd.Parameters.Add("@BarangHargaOutbound", MySqlDbType.Decimal).Value = std.HargaOutbound;
             cmd.Parameters.Add("@BarangEmail", MySqlDbType.VarChar).Value = std.Email;
@@ -124,12 +156,11 @@ namespace TemplateDashboardAdmin_CSharp
             }
             catch (Exception ex)
             {
-                // Handle the exception appropriately
                 Console.WriteLine(ex.Message);
+                MessageBox.Show(ex.Message);
             }
             finally
             {
-                con.Close();
             }
         }
         public static void DeleteBarang(int kode)
@@ -153,6 +184,44 @@ namespace TemplateDashboardAdmin_CSharp
             finally
             {
                 con.Close();
+            }
+        }
+
+        public static void GetBarang(string kode, Barang std)
+        {
+            // Assuming GetConnection is a method that returns a valid MySqlConnection object
+            MySqlConnection con = GetConnection();
+            try
+            {
+
+                // Correct the SQL query to select from the appropriate table
+                string getLastKodeSql = "SELECT nama, desk, kategori, stok, harga_awal, harga_jual, kode FROM items WHERE kode = @kode ORDER BY id DESC LIMIT 1";
+                MySqlCommand getLastKodeCmd = new MySqlCommand(getLastKodeSql, con);
+                getLastKodeCmd.Parameters.AddWithValue("@kode", kode);
+                using (MySqlDataReader reader = getLastKodeCmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        // Assuming std has properties: Nama, Desk, Kategori, Stok, HargaAwal, HargaJual, Kode
+                        std.Nama = reader["nama"].ToString();
+                        std.Deskripsi = reader["desk"].ToString();
+                        std.Kategori = int.Parse(reader["kategori"].ToString());
+                        std.Stok = int.Parse(reader["stok"].ToString());
+                        std.HargaInbound = float.Parse(reader["harga_awal"].ToString());
+                        std.HargaOutbound = (float)Convert.ToDecimal(reader["harga_jual"]);
+                        std.Kode = reader["kode"].ToString();
+                    } else
+                    {
+                        MessageBox.Show("Item tidak ditemukan");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                /*MessageBox.Show(ex.Message);*/
+            }
+            finally
+            {
             }
         }
 

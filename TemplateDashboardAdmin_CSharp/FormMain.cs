@@ -16,7 +16,7 @@ namespace TemplateDashboardAdmin_CSharp
 {
     public partial class FormMain : Form
     {
-
+        bool positif;
 
         #region "Jangan Merubah Bagian Ini"
         public String FormActive = "FormMain";
@@ -61,18 +61,18 @@ namespace TemplateDashboardAdmin_CSharp
             BringFomMinimizeToFront();
             ProgressBarLoad.Value = 100;
         }
-        private void FormChild_Resize(object sender, EventArgs e)
+        public void FormChild_Resize(object sender, EventArgs e)
         {
             LabelTitle.Text = ((Form)sender).Text;
             FormActive = ((Form)sender).Name;
             BringFomMinimizeToFront();
         }
-        private void btnLogout_Click(object sender, EventArgs e)
+        public void btnLogout_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void ButtonClose_Click(object sender, EventArgs e)
+        public void ButtonClose_Click(object sender, EventArgs e)
         {
             foreach (Control control in PanelFormFill.Controls)
             {
@@ -85,7 +85,7 @@ namespace TemplateDashboardAdmin_CSharp
             GetTopFormChild();
         }
 
-        private void ButtonMinimize_Click(object sender, EventArgs e)
+        public void ButtonMinimize_Click(object sender, EventArgs e)
         {
             foreach (Control control in PanelFormFill.Controls)
             {
@@ -98,7 +98,7 @@ namespace TemplateDashboardAdmin_CSharp
             }
             GetTopFormChild();
         }
-        private void GetTopFormChild()
+        public void GetTopFormChild()
         {
             /*foreach (Control control in PanelFormFill.Controls)
             {
@@ -110,7 +110,7 @@ namespace TemplateDashboardAdmin_CSharp
                 }
             }*/
         }
-        private void BringFomMinimizeToFront()
+        public void BringFomMinimizeToFront()
         {
            /* foreach (Control control in PanelFormFill.Controls)
             {
@@ -121,7 +121,7 @@ namespace TemplateDashboardAdmin_CSharp
             }*/
         }
 
-        private void FormMain_Load(object sender, EventArgs e)
+        public void FormMain_Load(object sender, EventArgs e)
         {
             btnLogout.FlatAppearance.MouseOverBackColor = Color.FromArgb(4, 32, 33);
             btnNotif.FlatAppearance.MouseOverBackColor = Color.FromArgb(4, 32, 33);
@@ -135,12 +135,12 @@ namespace TemplateDashboardAdmin_CSharp
 
 
 
-        private void userToolStripMenuItem_Click(object sender, EventArgs e)
+        public void userToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ShowFormToPanel(new FormUser());
+            ShowFormToPanel(new Dashboard(this));
         }
 
-        private void groupToolStripMenuItem_Click(object sender, EventArgs e)
+        public void groupToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ShowFormToPanel(new FormGroup());
         }
@@ -157,7 +157,8 @@ namespace TemplateDashboardAdmin_CSharp
 
         private void laporanToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            this.positif = false;
+            ShowFormToPanel(new FormKeluar());
         }
 
         private void sistemAdminToolStripMenuItem_Click(object sender, EventArgs e)
@@ -167,10 +168,16 @@ namespace TemplateDashboardAdmin_CSharp
 
         private void transaksiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ShowFormToPanel(new FormUser());
+            this.positif = true;
+            ShowFormToPanel(new FormMasuk());
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ShowFormToPanel(new Dashboard(this));
+        }
+
+        private void PanelFormFill_Paint(object sender, PaintEventArgs e)
         {
 
         }
