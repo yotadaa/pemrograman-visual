@@ -55,7 +55,6 @@ namespace TemplateDashboardAdmin_CSharp
             if (form.WindowState == FormWindowState.Minimized)
                 form.WindowState = FormWindowState.Maximized;
             form.Dock = DockStyle.Fill;
-            LabelTitle.Text = form.Text;
             form.BringToFront();
             FormActive = form.Name;
             BringFomMinimizeToFront();
@@ -63,7 +62,6 @@ namespace TemplateDashboardAdmin_CSharp
         }
         public void FormChild_Resize(object sender, EventArgs e)
         {
-            LabelTitle.Text = ((Form)sender).Text;
             FormActive = ((Form)sender).Name;
             BringFomMinimizeToFront();
         }

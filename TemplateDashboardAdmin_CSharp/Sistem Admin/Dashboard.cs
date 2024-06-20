@@ -54,7 +54,6 @@ namespace TemplateDashboardAdmin_CSharp.Sistem_Admin
             if (form.WindowState == FormWindowState.Minimized)
                 form.WindowState = FormWindowState.Maximized;
             form.Dock = DockStyle.Fill;
-            main.LabelTitle.Text = form.Text;
             form.BringToFront();
             main.FormActive = form.Name;
             main.BringFomMinimizeToFront();

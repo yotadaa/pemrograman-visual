@@ -92,5 +92,15 @@ namespace TemplateDashboardAdmin_CSharp.Sistem_Admin
                 Display();
             }
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox1.Text.Length > 0)
+            {
+                DbBarang.DisplayAndSearch("select  kode, nama, desk, kategori,stok,harga_awal, harga_jual FROM items " +
+                $"where nama like '%{textBox1.Text}$' OR desk like '%{textBox1.Text}%'", dataGridView1);
+            }
+            else Display();
+        }
     }
 }

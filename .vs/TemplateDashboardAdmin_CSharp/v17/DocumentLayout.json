@@ -3,20 +3,36 @@
   "WorkspaceRootPath": "D:\\pemvis\\project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FB226E8F-E796-430D-B745-79303CEECDC0}|TemplateDashboardAdmin_CSharp\\TemplateDashboardAdmin_CSharp.csproj|d:\\pemvis\\project\\templatedashboardadmin_csharp\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FB226E8F-E796-430D-B745-79303CEECDC0}|TemplateDashboardAdmin_CSharp\\TemplateDashboardAdmin_CSharp.csproj|solutionrelative:templatedashboardadmin_csharp\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{FB226E8F-E796-430D-B745-79303CEECDC0}|TemplateDashboardAdmin_CSharp\\TemplateDashboardAdmin_CSharp.csproj|d:\\pemvis\\project\\templatedashboardadmin_csharp\\dbbarang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB226E8F-E796-430D-B745-79303CEECDC0}|TemplateDashboardAdmin_CSharp\\TemplateDashboardAdmin_CSharp.csproj|solutionrelative:templatedashboardadmin_csharp\\dbbarang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB226E8F-E796-430D-B745-79303CEECDC0}|TemplateDashboardAdmin_CSharp\\TemplateDashboardAdmin_CSharp.csproj|d:\\pemvis\\project\\templatedashboardadmin_csharp\\sistem admin\\formbarang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FB226E8F-E796-430D-B745-79303CEECDC0}|TemplateDashboardAdmin_CSharp\\TemplateDashboardAdmin_CSharp.csproj|solutionrelative:templatedashboardadmin_csharp\\sistem admin\\formbarang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB226E8F-E796-430D-B745-79303CEECDC0}|TemplateDashboardAdmin_CSharp\\TemplateDashboardAdmin_CSharp.csproj|d:\\pemvis\\project\\templatedashboardadmin_csharp\\sistem admin\\formbarang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB226E8F-E796-430D-B745-79303CEECDC0}|TemplateDashboardAdmin_CSharp\\TemplateDashboardAdmin_CSharp.csproj|solutionrelative:templatedashboardadmin_csharp\\sistem admin\\formbarang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB226E8F-E796-430D-B745-79303CEECDC0}|TemplateDashboardAdmin_CSharp\\TemplateDashboardAdmin_CSharp.csproj|d:\\pemvis\\project\\templatedashboardadmin_csharp\\barang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB226E8F-E796-430D-B745-79303CEECDC0}|TemplateDashboardAdmin_CSharp\\TemplateDashboardAdmin_CSharp.csproj|solutionrelative:templatedashboardadmin_csharp\\barang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FB226E8F-E796-430D-B745-79303CEECDC0}|TemplateDashboardAdmin_CSharp\\TemplateDashboardAdmin_CSharp.csproj|D:\\pemvis\\project\\templatedashboardadmin_csharp\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FB226E8F-E796-430D-B745-79303CEECDC0}|TemplateDashboardAdmin_CSharp\\TemplateDashboardAdmin_CSharp.csproj|solutionrelative:templatedashboardadmin_csharp\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB226E8F-E796-430D-B745-79303CEECDC0}|TemplateDashboardAdmin_CSharp\\TemplateDashboardAdmin_CSharp.csproj|d:\\pemvis\\project\\templatedashboardadmin_csharp\\sistem admin\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FB226E8F-E796-430D-B745-79303CEECDC0}|TemplateDashboardAdmin_CSharp\\TemplateDashboardAdmin_CSharp.csproj|solutionrelative:templatedashboardadmin_csharp\\sistem admin\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{FB226E8F-E796-430D-B745-79303CEECDC0}|TemplateDashboardAdmin_CSharp\\TemplateDashboardAdmin_CSharp.csproj|d:\\pemvis\\project\\templatedashboardadmin_csharp\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FB226E8F-E796-430D-B745-79303CEECDC0}|TemplateDashboardAdmin_CSharp\\TemplateDashboardAdmin_CSharp.csproj|solutionrelative:templatedashboardadmin_csharp\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB226E8F-E796-430D-B745-79303CEECDC0}|TemplateDashboardAdmin_CSharp\\TemplateDashboardAdmin_CSharp.csproj|d:\\pemvis\\project\\templatedashboardadmin_csharp\\sistem admin\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FB226E8F-E796-430D-B745-79303CEECDC0}|TemplateDashboardAdmin_CSharp\\TemplateDashboardAdmin_CSharp.csproj|D:\\pemvis\\project\\templatedashboardadmin_csharp\\sistem admin\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FB226E8F-E796-430D-B745-79303CEECDC0}|TemplateDashboardAdmin_CSharp\\TemplateDashboardAdmin_CSharp.csproj|solutionrelative:templatedashboardadmin_csharp\\sistem admin\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB226E8F-E796-430D-B745-79303CEECDC0}|TemplateDashboardAdmin_CSharp\\TemplateDashboardAdmin_CSharp.csproj|D:\\pemvis\\project\\templatedashboardadmin_csharp\\sistem admin\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FB226E8F-E796-430D-B745-79303CEECDC0}|TemplateDashboardAdmin_CSharp\\TemplateDashboardAdmin_CSharp.csproj|solutionrelative:templatedashboardadmin_csharp\\sistem admin\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,17 +42,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "FormMain.cs",
               "DocumentMoniker": "D:\\pemvis\\project\\TemplateDashboardAdmin_CSharp\\FormMain.cs",
               "RelativeDocumentMoniker": "TemplateDashboardAdmin_CSharp\\FormMain.cs",
               "ToolTip": "D:\\pemvis\\project\\TemplateDashboardAdmin_CSharp\\FormMain.cs",
               "RelativeToolTip": "TemplateDashboardAdmin_CSharp\\FormMain.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAD4vz4AAAAJAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD0AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-17T09:04:51.324Z",
               "IsPinned": true,
@@ -48,7 +64,58 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormBarang.cs",
+              "DocumentMoniker": "D:\\pemvis\\project\\TemplateDashboardAdmin_CSharp\\Sistem Admin\\FormBarang.cs",
+              "RelativeDocumentMoniker": "TemplateDashboardAdmin_CSharp\\Sistem Admin\\FormBarang.cs",
+              "ToolTip": "D:\\pemvis\\project\\TemplateDashboardAdmin_CSharp\\Sistem Admin\\FormBarang.cs",
+              "RelativeToolTip": "TemplateDashboardAdmin_CSharp\\Sistem Admin\\FormBarang.cs",
+              "ViewState": "AQIAAE8AAAAAAAAAAAAAAGYAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T12:52:32.516Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormBarang.cs [Design]",
+              "DocumentMoniker": "D:\\pemvis\\project\\TemplateDashboardAdmin_CSharp\\Sistem Admin\\FormBarang.cs",
+              "RelativeDocumentMoniker": "TemplateDashboardAdmin_CSharp\\Sistem Admin\\FormBarang.cs",
+              "ToolTip": "D:\\pemvis\\project\\TemplateDashboardAdmin_CSharp\\Sistem Admin\\FormBarang.cs [Design]",
+              "RelativeToolTip": "TemplateDashboardAdmin_CSharp\\Sistem Admin\\FormBarang.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T12:50:33.568Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Barang.cs",
+              "DocumentMoniker": "D:\\pemvis\\project\\TemplateDashboardAdmin_CSharp\\Barang.cs",
+              "RelativeDocumentMoniker": "TemplateDashboardAdmin_CSharp\\Barang.cs",
+              "ToolTip": "D:\\pemvis\\project\\TemplateDashboardAdmin_CSharp\\Barang.cs",
+              "RelativeToolTip": "TemplateDashboardAdmin_CSharp\\Barang.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T12:46:09.114Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "DbBarang.cs",
+              "DocumentMoniker": "D:\\pemvis\\project\\TemplateDashboardAdmin_CSharp\\DbBarang.cs",
+              "RelativeDocumentMoniker": "TemplateDashboardAdmin_CSharp\\DbBarang.cs",
+              "ToolTip": "D:\\pemvis\\project\\TemplateDashboardAdmin_CSharp\\DbBarang.cs",
+              "RelativeToolTip": "TemplateDashboardAdmin_CSharp\\DbBarang.cs",
+              "ViewState": "AQIAAHEAAAAAAAAAAAAuwIcAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T12:45:49.999Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "FormMain.cs [Design]",
               "DocumentMoniker": "D:\\pemvis\\project\\TemplateDashboardAdmin_CSharp\\FormMain.cs",
               "RelativeDocumentMoniker": "TemplateDashboardAdmin_CSharp\\FormMain.cs",
@@ -60,20 +127,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "Dashboard.cs",
               "DocumentMoniker": "D:\\pemvis\\project\\TemplateDashboardAdmin_CSharp\\Sistem Admin\\Dashboard.cs",
               "RelativeDocumentMoniker": "TemplateDashboardAdmin_CSharp\\Sistem Admin\\Dashboard.cs",
               "ToolTip": "D:\\pemvis\\project\\TemplateDashboardAdmin_CSharp\\Sistem Admin\\Dashboard.cs",
               "RelativeToolTip": "TemplateDashboardAdmin_CSharp\\Sistem Admin\\Dashboard.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADQAAAAiAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADcAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-20T11:22:14.624Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "Dashboard.cs [Design]",
               "DocumentMoniker": "D:\\pemvis\\project\\TemplateDashboardAdmin_CSharp\\Sistem Admin\\Dashboard.cs",
               "RelativeDocumentMoniker": "TemplateDashboardAdmin_CSharp\\Sistem Admin\\Dashboard.cs",
